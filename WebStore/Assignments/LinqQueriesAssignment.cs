@@ -172,9 +172,9 @@ namespace WebStore.Assignments
                 return;
             }
 
-            foreach (var item in customerOrderCount)
+            foreach (var customer in customerOrderCount)
             {
-                 Console.WriteLine($"Full name: {item.CustomerName}, Order count: {item.OrderCount}");
+                 Console.WriteLine($"Full name: {customer.CustomerName}, Order count: {customer.OrderCount}");
             }
         }
 
@@ -204,9 +204,9 @@ namespace WebStore.Assignments
                 return;
             }
 
-            foreach (var item in list)
+            foreach (var customer in list)
             {
-                Console.WriteLine($"Name: {item.Name} Total: {item.Total}");
+                Console.WriteLine($"Name: {customer.Name} Total: {customer.Total}");
             }
         }
 
@@ -228,9 +228,9 @@ namespace WebStore.Assignments
                 return;
             }
 
-            foreach (var item in orders)
+            foreach (var order in orders)
             {
-                Console.WriteLine($"ID: {item.OrderId}, Date: {item.OrderDate}, Name: {item.Customer.FirstName} {item.Customer.LastName}");
+                Console.WriteLine($"ID: {order.OrderId}, Date: {order.OrderDate}, Name: {order.Customer.FirstName} {order.Customer.LastName}");
             }
         }
 
@@ -255,10 +255,10 @@ namespace WebStore.Assignments
                 return;
             }
 
-            foreach (var item in products)
+            foreach (var product in products)
             {
-                int productTotal = item.OrderItems.Sum(x => x.Quantity);
-                Console.WriteLine($"Name: {item.ProductName} Total sold: {productTotal}");
+                int productTotal = product.OrderItems.Sum(x => x.Quantity);
+                Console.WriteLine($"Name: {product.ProductName} Total sold: {productTotal}");
             }
         }
 
