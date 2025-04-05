@@ -43,7 +43,7 @@ namespace WebStore.Assignments
 
             Console.WriteLine("=== Task 01: List All Customers ===");
 
-            if (customers == null || customers.Count() == 0)
+            if (customers == null || customers.Count == 0)
             {
                 Console.WriteLine("No customers found.");
                 return;
@@ -73,7 +73,7 @@ namespace WebStore.Assignments
             .Include(o => o.OrderItems)
             .ToListAsync();
 
-            if (orders == null || orders.Count() == 0)
+            if (orders == null || orders.Count == 0)
             {
                 Console.WriteLine("No orders found.");
                 return;
@@ -103,7 +103,7 @@ namespace WebStore.Assignments
                 .OrderByDescending(x => x.Price)
                 .ToListAsync();
 
-            if (products == null || products.Count() == 0)
+            if (products == null || products.Count == 0)
             {
                 Console.WriteLine("No products found.");
                 return;
@@ -132,7 +132,7 @@ namespace WebStore.Assignments
                 .Where(x => x.OrderStatus == "Pending")
                 .ToListAsync();
 
-            if (orders == null || orders.Count() == 0)
+            if (orders == null || orders.Count == 0)
             {
                 Console.WriteLine("No orders found.");
                 return;
@@ -166,7 +166,7 @@ namespace WebStore.Assignments
                 })
                 .ToListAsync();
 
-            if (customerOrderCount == null || customerOrderCount.Count() == 0)
+            if (customerOrderCount == null || customerOrderCount.Count == 0)
             {
                 Console.WriteLine("No orders found.");
                 return;
@@ -198,7 +198,7 @@ namespace WebStore.Assignments
                 .Take(3)
                 .ToListAsync();
 
-            if (list == null || list.Count() == 0)
+            if (list == null || list.Count == 0)
             {
                 Console.WriteLine("No customers found.");
                 return;
@@ -249,7 +249,7 @@ namespace WebStore.Assignments
                 .OrderByDescending(x => x.OrderItems.Sum(x => x.Quantity))
                 .ToListAsync();
 
-            if (products == null || products.Count() == 0)
+            if (products == null || products.Count == 0)
             {
                 Console.WriteLine("No products found.");
                 return;
@@ -275,7 +275,7 @@ namespace WebStore.Assignments
                 .Where(x => x.OrderItems.Any(z => z.Discount > 0))
                 .ToListAsync();
 
-            if (discountedOrders == null || discountedOrders.Count() == 0)
+            if (discountedOrders == null || discountedOrders.Count == 0)
             {
                 Console.WriteLine("No discounted orders found.");
                 return;
